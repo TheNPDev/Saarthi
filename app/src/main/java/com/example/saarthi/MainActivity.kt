@@ -36,11 +36,11 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        val search = findViewById<CardView>(R.id.option2)
-        search.setOnClickListener {
-            val intent = Intent(this , SearchForm::class.java)
-            startActivity(intent)
-        }
+//        val search = findViewById<CardView>(R.id.option2)
+//        search.setOnClickListener {
+//            val intent = Intent(this , SearchForm::class.java)
+//            startActivity(intent)
+//        }
         val mywheel = findViewById<CardView>(R.id.option1)
         mywheel.setOnClickListener {
             val intent1 = Intent(this, MyWheelchair::class.java)

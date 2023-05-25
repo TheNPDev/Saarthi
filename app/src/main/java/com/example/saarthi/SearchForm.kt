@@ -25,16 +25,32 @@ class SearchForm : AppCompatActivity() {
             "Muzaffarnagar", "Mathura", "Sultanpur", "Banda", "Amroha",
             "Ayodhya", "Mirzapur", "Etawah", "Firozabad", "Hapur",
             "Bulandshahr", "Bahraich", "Rampur", "Modinagar", "Unnao")
-        val colleges = arrayOf("Amity University",
-            "Jaypee Institute of Information Technology",
-            "Galogotia college of engineering and technology",
-            "Galgotias University",
-            "Sharda University",
-            "Noida Institute of Engineering and Technology",
-            "JSS Academy of Technical Education",
-            "Asian Business School",
-            "Birla Institute of Technology",
-            "IILM College of Engineering and Technology")
+        val colleges = arrayOf("Institute of Management Technology (IMT)",
+            "ABES Engineering College",
+            "Ajay Kumar Garg Engineering College (AKGEC)",
+            "Indraprastha Engineering College (IPEC)",
+            "Institute of Technology and Science (ITS)",
+            "ABES Institute of Technology (ABESIT)",
+            "Institute of Engineering and Rural Technology (IERT)",
+            "Raj Kumar Goel Institute of Technology (RKGIT)",
+            "KIET Group of Institutions",
+            "HR Institute of Technology (HRIT)",
+            "Dewan V.S. Institute of Engineering and Technology (DEWAN VSIT)",
+            "Krishna Institute of Engineering and Technology (KIET)",
+            "IMS Engineering College",
+            "Ghaziabad Institute of Management and Technology (GIMT)",
+            "Jagran Institute of Management and Mass Communication (JIMMC)",
+            "IMS Law College",
+            "Kamla Nehru Institute of Physical and Social Sciences",
+            "IMS College of Engineering",
+            "Raj Kumar Goel Institute of Technology for Women (RKGITW)",
+            "Ideal Institute of Technology (IIT)",
+            "Babu Banarsi Das Institute of Technology (BBDIT)",
+            "Vivekanand Institute of Technology and Science (VITS)",
+            "HLM Business School",
+            "Raj Kumar Goel Engineering College (RKGEC)",
+            "Sunder Deep Group of Institutions",
+            "Inderprastha Engineering College (IPEC)")
         val allPlaces = arrayOf("Railway Stations","Airports","Colleges","Bus Stations","Hospitals","Parks","Tourist Places")
 
         val states = findViewById<Spinner>(R.id.allStates)
@@ -97,7 +113,7 @@ class SearchForm : AppCompatActivity() {
 
 
 
-                                    if (selected_city == "Noida" && selected_place == "Colleges")
+                                    if (selected_city == "Ghaziabad" && selected_place == "Colleges")
                                     {
                                         cllg_card.isVisible = true
                                         val cllg = findViewById<Spinner>(R.id.allCollege)
@@ -119,7 +135,7 @@ class SearchForm : AppCompatActivity() {
                                                 val selected_cllg: String =
                                                     cllg.getSelectedItem().toString()
 
-                                                if (selected_cllg == "Galogotia college of engineering and technology")
+                                                if (selected_cllg == "Institute of Technology and Science (ITS)")
                                                 {
                                                     val proceed = findViewById<Button>(R.id.proceed)
                                                     proceed.setOnClickListener {
@@ -129,7 +145,9 @@ class SearchForm : AppCompatActivity() {
                                                 }
                                             }
 
-                                            override fun onNothingSelected(p0: AdapterView<*>?) {}
+                                            override fun onNothingSelected(p0: AdapterView<*>?) {
+                                                Toast.makeText(applicationContext,"Please select college", Toast.LENGTH_LONG)
+                                            }
                                         })
 
 
@@ -138,7 +156,7 @@ class SearchForm : AppCompatActivity() {
                                 }
 
                                 override fun onNothingSelected(p0: AdapterView<*>?) {
-                                    TODO("Not yet implemented")
+                                    Toast.makeText(applicationContext,"Please select any public place", Toast.LENGTH_LONG)
                                 }
                             })
 

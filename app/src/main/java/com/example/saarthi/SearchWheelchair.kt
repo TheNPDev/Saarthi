@@ -53,13 +53,13 @@ class SearchWheelchair : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
 
         // Add a marker in Sydney and move the camera
-        val galgotia = LatLng(28.457382135706318, 77.49782929382334)
-        val galgotia1 = LatLng(28.454352135706315,77.49745929382332)
-        val galgotia2 = LatLng(28.457382135706318,77.49742929382334)
-        mMap.addMarker(MarkerOptions().position(galgotia).title("Wheelchair 1"))
-        mMap.addMarker(MarkerOptions().position(galgotia1).title("Wheelchair 2"))
-        mMap.addMarker(MarkerOptions().position(galgotia2).title("Wheelchair 3"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(galgotia))
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(galgotia, 15f))
+        val its = LatLng(28.677559718503982, 77.38883555178325)
+        val its1 = LatLng(28.677079718503982,77.38826555178325)
+        val its2 = LatLng(28.677929718503982,77.38801555178325)
+        mMap.addMarker(MarkerOptions().position(its).title("Wheelchair 1"))
+        mMap.addMarker(MarkerOptions().position(its1).title("Wheelchair 2"))
+        mMap.addMarker(MarkerOptions().position(its2).title("Wheelchair 3"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(its))
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(its, 15f))
     }
 }
